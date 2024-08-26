@@ -12,7 +12,13 @@ connectDB();
 
 // Middleware
 app.use(express.json()); // `extended: false` is not needed for JSON
-app.use(cors());
+app.use(cors(
+    {
+        origin:[""],
+        methods:["POST","GET","PUT","DELETE"],
+        credentials:"true"
+    }
+));
 
 // Define routes
 app.use('/api', require('./routes/UserRoutes'));
