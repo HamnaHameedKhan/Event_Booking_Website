@@ -14,7 +14,7 @@ connectDB();
 app.use(express.json()); // `extended: false` is not needed for JSON
 app.use(cors(
     {
-        origin:[""],
+        origin:["https://event-booking-website-client.vercel.app/"],
         methods:["POST","GET","PUT","DELETE"],
         credentials:"true"
     }
